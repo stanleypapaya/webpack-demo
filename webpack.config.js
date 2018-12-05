@@ -3,7 +3,7 @@ module.exports = {
     entry: './app/index.js',  
     output: {
         path: path.resolve(__dirname, 'build'),
-        filename: "bundle.js"
+        filename: "bundle.js",
     },
     module: {
         rules: [
@@ -16,6 +16,20 @@ module.exports = {
                 presets: ['@babel/preset-env']
               }
             }
+          },
+          {
+            test: /\.(png|jpg|gif)$/,
+            use: [
+              {
+                loader: 'file-loader',
+                options: {
+                  name: '[path][name].[ext]',
+                  context: ''
+                }
+              }
+            ]
+              
+            
           }
         ]
       }

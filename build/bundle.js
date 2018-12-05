@@ -74,6 +74,10 @@ var _sum = __webpack_require__(1);
 
 var _sum2 = _interopRequireDefault(_sum);
 
+var _small = __webpack_require__(2);
+
+var _small2 = _interopRequireDefault(_small);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 console.log((0, _sum2.default)(1, 2));
@@ -92,6 +96,12 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = function (a, b) {
   return a + b;
 };
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "images/small.png";
 
 /***/ })
 /******/ ]);
