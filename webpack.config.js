@@ -18,13 +18,20 @@ module.exports = {
             }
           },
           {
+            test: /\.(css|scss|sass)$/,
+            use: ['style-loader', 'fast-css-loader', 'fast-sass-loader']
+          },
+          {
             test: /\.(png|jpg|gif)$/,
             use: [
               {
                 loader: 'file-loader',
                 options: {
                   name: '[path][name].[ext]',
-                  context: ''
+                  context: '',
+                  emitFile: false,
+                  publicPath: 'build/images'
+            
                 }
               }
             ]
